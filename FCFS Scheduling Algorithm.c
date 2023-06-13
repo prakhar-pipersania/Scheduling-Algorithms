@@ -35,8 +35,9 @@ int main()
     printf("\nProcessNo\tAT\tBT\tCT\tTAT\tWT\tRT\n");
     for(int i=0;i<n;i++)
     {
+	if(p[i].at > ct) ct = p[i].at;
         ct+=p[i].bt;
-		p[i].ct=ct;
+	p[i].ct=ct;
         p[i].tat=p[i].ct-p[i].at;
         avgtat+=p[i].tat;
         p[i].wt=p[i].tat-p[i].bt;
